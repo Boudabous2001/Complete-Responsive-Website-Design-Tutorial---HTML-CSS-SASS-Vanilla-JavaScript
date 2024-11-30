@@ -1,0 +1,555 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;500;600&family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  color: #fff;
+  background: #000;
+  border: 0.2rem solid #000;
+  cursor: pointer;
+  font-weight: bolder;
+  border-radius: 0.5rem;
+}
+.btn:hover {
+  background: none;
+  color: #000;
+}
+
+.line-down {
+  position: relative;
+  z-index: 0;
+}
+.line-down::before {
+  content: "";
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff53f;
+  z-index: -1;
+  clip-path: polygon(0 80%, 100% 75%, 100% 100%, 0% 100%);
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+}
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem 9%;
+}
+.header .logo {
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: bolder;
+}
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: #000;
+}
+.header .navbar a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.heading span {
+  font-size: 2.5rem;
+}
+.heading h1 {
+  font-size: 4rem;
+  padding-top: 0.5rem;
+}
+
+.btn {
+  margin-top: 0;
+}
+
+#menu-btn {
+  cursor: pointer;
+  font-size: 3rem;
+  display: none;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+.home {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: #95ffed;
+}
+.home .image {
+  flex: 1 1 42rem;
+  margin-top: 5rem;
+}
+.home .image img {
+  width: 100%;
+  animation: floating 0.4s linear infinite;
+}
+.home .content {
+  flex: 1 1 42rem;
+}
+.home .content h3 {
+  font-size: 6.5rem;
+}
+.home .content p {
+  font-size: 2rem;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.services {
+  background: #f6e4d5;
+}
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+.services .box-container .box {
+  background: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.services .box-container .box img {
+  height: 8rem;
+  margin-bottom: 0.7rem;
+}
+.services .box-container .box h3 {
+  font-size: 2.2rem;
+  padding: 1.5rem 0;
+}
+.services .box-container .box p {
+  line-height: 2;
+  font-size: 1.7rem;
+}
+
+.about {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.about .image {
+  flex: 1 1 42rem;
+}
+.about .image img {
+  width: 100%;
+}
+.about .content {
+  flex: 1 1 42rem;
+}
+.about .content h3 {
+  font-size: 4rem;
+  line-height: 1.3;
+}
+.about .content p {
+  font-size: 1.7rem;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.features .box-container .box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  min-height: 60vh;
+  margin-bottom: 3rem;
+}
+.features .box-container .box:last-child {
+  margin-bottom: 0;
+}
+.features .box-container .box:nth-child(even) {
+  flex-flow: row-reverse wrap;
+}
+.features .box-container .box .image {
+  flex: 1 1 42rem;
+}
+.features .box-container .box .image img {
+  width: 100%;
+}
+.features .box-container .box .content {
+  flex: 1 1 42rem;
+}
+.features .box-container .box .content h3 {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+.features .box-container .box .content p {
+  padding: 1.5rem 0;
+  line-height: 2;
+  font-size: 1.7rem;
+}
+
+.steps {
+  background: #95ffed;
+}
+.steps .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+.steps .box-container .box {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.steps .box-container .box img {
+  height: 20rem;
+}
+.steps .box-container .box h3 {
+  font-size: 2.2rem;
+  padding: 1.5rem 0;
+}
+.steps .box-container .box p {
+  font-size: 1.7rem;
+  line-height: 2;
+  padding-bottom: 1rem;
+}
+
+.pricing {
+  background: pink;
+  text-align: center;
+  border: 0.2rem solid #000;
+}
+.pricing .price-toggler {
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+  background: #fff;
+}
+.pricing .price-toggler span {
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #000;
+  border-radius: 0.5rem;
+}
+.pricing .price-toggler span.active {
+  background-color: #000;
+  color: #fff;
+}
+.pricing .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+.pricing .box-container .box {
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+.pricing .box-container .box:nth-child(2) {
+  border: 0.2rem solid #000;
+}
+.pricing .box-container .box:nth-child(2) h3 {
+  background: pink;
+}
+.pricing .box-container .box h3 {
+  font-size: 2rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  background: #95ffed;
+  margin-bottom: 1rem;
+}
+.pricing .box-container .box .price {
+  padding: 2rem 0;
+}
+.pricing .box-container .box .price .month, .pricing .box-container .box .price .year {
+  font-size: 5rem;
+  animation: fadeUp 0.2s linear backwards;
+}
+.pricing .box-container .box .price .month span, .pricing .box-container .box .price .year span {
+  font-size: 3rem;
+}
+.pricing .box-container .box .price .year {
+  display: none;
+}
+.pricing .box-container .box .list {
+  padding: 1rem 0;
+}
+.pricing .box-container .box .list p {
+  padding: 1rem 0;
+  font-size: 1.7rem;
+}
+.pricing .box-container .box .list i {
+  padding-right: 0.5rem;
+}
+
+.reviews .slide-container {
+  max-width: 70rem;
+  margin: 1rem auto;
+}
+.reviews .slide-container .slide {
+  text-align: center;
+  max-width: 60rem;
+  margin: 1rem auto;
+  display: none;
+}
+.reviews .slide-container .slide.active {
+  display: block;
+}
+.reviews .slide-container .slide img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: fadeUp 0.2s linear backwards;
+}
+.reviews .slide-container .slide p {
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  line-height: 2;
+  animation: fadeUp 0.2s linear 0.4s backwards;
+}
+.reviews .slide-container .slide h3 {
+  padding: 0.7rem;
+  font-size: 2rem;
+  animation: fadeUp 0.2s linear 0.6s backwards;
+}
+.reviews .slide-container .slide span {
+  display: block;
+  font-size: 1.7rem;
+  animation: fadeUp 0.2s linear 0.8s backwards;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 1rem;
+}
+.controls div {
+  font-size: 5rem;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+.controls div:hover {
+  transform: scale(1.2);
+}
+
+.faq {
+  background: #95ffed;
+}
+.faq .accordation-container {
+  margin: 1rem auto;
+  max-width: 70rem;
+}
+.faq .accordation-container .accordation {
+  margin: 1rem 0;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.faq .accordation-container .accordation.active .accordation-heading i {
+  transform: rotate(180deg);
+}
+.faq .accordation-container .accordation.active .accordation-content {
+  display: block;
+}
+.faq .accordation-container .accordation .accordation-heading {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+}
+.faq .accordation-container .accordation .accordation-heading h3 {
+  font-size: 2.2rem;
+  line-height: 1.5;
+}
+.faq .accordation-container .accordation .accordation-heading i {
+  font-size: 2rem;
+  transition: 0.2s linear;
+}
+.faq .accordation-container .accordation .accordation-content {
+  padding: 1.5rem;
+  padding-top: 0;
+  line-height: 2;
+  font-size: 1.7rem;
+  display: none;
+  animation: fadeUp 0.2s linear backwards;
+}
+
+.newsletter .content {
+  text-align: center;
+  max-width: 60rem;
+  margin: 1rem auto;
+}
+.newsletter h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.newsletter p {
+  padding: 1rem 0;
+  line-height: 2;
+  font-size: 1.7rem;
+}
+.newsletter a {
+  color: #000;
+}
+.newsletter a:hover {
+  text-decoration: underline;
+}
+.newsletter form {
+  display: flex;
+  border: 0.2rem solid #000;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 1rem 9;
+}
+.newsletter form .email {
+  width: 100%;
+  padding: 1rem 1.4rem;
+  font-size: 1.7rem;
+  text-transform: none;
+}
+.newsletter form .btn {
+  margin-top: 0;
+}
+
+.footer {
+  background: #f6e4d5;
+}
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  padding: 1rem 0;
+}
+.footer .box-container .box a {
+  font-size: 2rem;
+  color: #000;
+  display: block;
+  padding: 1rem 0;
+}
+.footer .box-container .box a:hover {
+  text-decoration: underline;
+}
+
+.credit {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+  .home .content h3 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 991) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+    transition: 0.2s linear;
+  }
+  #menu-btn.fa-items {
+    transform: rotate(180deg);
+  }
+  .header .btn {
+    display: none;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    border-top: 0.2rem solid #000;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.2s linear;
+  }
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 0;
+    padding: 1.5rem 2rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .heading h1 {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
